@@ -1,0 +1,35 @@
+:root { --bg:#f6f7fb; --text:#1b1f23; --card:#fff; --muted:#6b7280; --font-sans:'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica, sans-serif; --font-display:'Oswald', 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; --font-serif: Georgia, "Times New Roman", Times, serif; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: var(--font-sans); color:var(--text); background:var(--bg); }
+.container { max-width: 980px; margin: 40px auto; padding: 0 16px; }
+h1 { margin: 0 0 6px; font-family: var(--font-display); font-weight: 600; letter-spacing: .2px; }
+.h2, h2 { font-family: var(--font-display); font-weight: 600; letter-spacing: .15px; }
+.h3, h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: .1px; }
+.sub { color: var(--muted); margin-top: 0; }
+.card { background: var(--card); border-radius: 12px; padding: 16px; margin: 18px 0; box-shadow: 0 6px 20px rgba(0,0,0,.06); }
+label { display:block; margin: 10px 0; position: relative; }
+input, select, button { padding: 10px 12px; font-size: 16px; }
+button { cursor:pointer; }
+.suggestions { list-style:none; margin:6px 0 0; padding:0; border:1px solid #e5e7eb; border-radius:8px; background:#fff; position:absolute; z-index:2; width: min(600px, calc(100% - 32px)); max-height: 220px; overflow:auto; }
+.suggestions li { padding:8px 10px; cursor:pointer; }
+.suggestions li:hover { background:#f3f4f6; }
+.result { line-height:1.6; }
+.result h3 { margin: 8px 0; font-family: var(--font-display); font-weight: 600; }
+.badge { display:inline-block; padding:2px 8px; border-radius:999px; background:#eef2ff; }
+.meta-card { background:#fff; border:1px solid #e5e7eb; border-radius:10px; padding:12px; margin:10px 0; }
+.meta-header { display:flex; gap:10px; align-items:center; margin-bottom:6px; }
+.meta-list { margin: 0; padding-left: 18px; }
+
+/* Typography utilities to mirror OSU Chemistry tone */
+.font-sans { font-family: var(--font-sans) !important; }
+.font-display { font-family: var(--font-display) !important; }
+.font-serif { font-family: var(--font-serif) !important; }
+.eyebrow { font-family: var(--font-sans); text-transform: uppercase; letter-spacing: .12em; font-weight: 600; color: var(--muted); font-size: .8rem; display: block; }
+.lede { font-family: var(--font-serif); font-size: 1.1rem; line-height: 1.7; }
+.caption { font-size: .85rem; color: var(--muted); }
+
+/* Responsive type scale */
+h1 { font-size: clamp(1.75rem, 1.2rem + 2.2vw, 2.5rem); }
+h2 { font-size: clamp(1.35rem, 1rem + 1.2vw, 1.75rem); }
+h3 { font-size: clamp(1.1rem, .95rem + .6vw, 1.25rem); }
+p, li, input, select, button { line-height: 1.5; }

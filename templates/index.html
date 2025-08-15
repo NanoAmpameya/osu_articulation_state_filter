@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-1">OSU Chemistry Transfer Credit Evaluation</h1>
+<p class="sub">Pick a state, choose your institution, and enter a course to see OSU equivalents.</p>
+
+<section class="card border-0 shadow-sm">
+  <div class="card-body p-0">
+    <h2 class="h5">Select Degree</h2>
+    <label class="form-label">Select a Degree Program
+      <select id="degree" class="form-select w-auto">
+        <option value="BA_Chem">B.A. in Chemistry</option>
+        <option value="BS_Chem">B.S. in Chemistry</option>
+        <option value="Minor_Chem">Chemistry Minor</option>
+      </select>
+    </label>
+  </div>
+  
+</section>
+
+<section class="card border-0 shadow-sm">
+  <div class="card-body p-0">
+    <h2 class="h5">Enter Course</h2>
+    <div class="row g-3 align-items-end">
+      <div class="col-12 col-md-4">
+        <label class="form-label">State
+          <select id="state" class="form-select">
+            <option value="">All states</option>
+          </select>
+        </label>
+      </div>
+      <div class="col-12 col-md-8 position-relative">
+        <label class="form-label">Institution
+          <input id="institution" class="form-control" placeholder="Start typing institution name">
+          <ul id="inst-suggest" class="suggestions"></ul>
+        </label>
+      </div>
+      <div class="col-12 col-md-6">
+        <label class="form-label">Course Code
+          <input id="course" class="form-control" placeholder="e.g., CHE 107LR">
+        </label>
+      </div>
+      <div class="col-12 col-md-6 d-grid d-md-flex">
+        <button id="evaluate" class="btn btn-primary">Check Equivalency</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="card border-0 shadow-sm" id="results" hidden>
+  <div class="card-body p-0">
+    <h2 class="h5">Credit Evaluation Results</h2>
+    <div id="results-body"></div>
+  </div>
+</section>
+{% endblock %}

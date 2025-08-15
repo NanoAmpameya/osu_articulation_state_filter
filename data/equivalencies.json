@@ -1,0 +1,61 @@
+[
+  {
+    "institution": "Binghamton University (SUNY)",
+    "course_code": "CHEM 107",
+    "course_title": "Intro Chemistry",
+    "credits": 4,
+    "osu_equivalent": [
+      "CH 231",
+      "CH 261"
+    ],
+    "ldt": 1.0,
+    "catalog_link": "https://catalog.binghamton.edu/",
+    "notes": "Lecture+Lab combined; 1 cr LDT remainder"
+  },
+  {
+    "institution": "College of Western Idaho",
+    "course_code": "CHM 101",
+    "course_title": "Intro to Chemistry",
+    "credits": 3,
+    "osu_equivalent": [],
+    "ldt": 0,
+    "catalog_link": "https://catalog.cwi.edu/",
+    "notes": "Intro/survey; Not Equivalent to majors sequence"
+  },
+  {
+    "institution": "University at Buffalo (SUNY)",
+    "course_code": "CHE 107LR",
+    "course_title": "General Chemistry",
+    "credits": 3.5,
+    "osu_equivalent": [
+      "CH 201"
+    ],
+    "ldt": 2.25,
+    "catalog_link": "https://catalogs.buffalo.edu/",
+    "notes": "Partial alignment; LDT credit difference"
+  },
+  {
+    "institution": "Eastern Kentucky University",
+    "course_code": "CHE 111",
+    "course_title": "General Chemistry I",
+    "credits": 3,
+    "osu_equivalent": [
+      "CH 231"
+    ],
+    "ldt": 0.5,
+    "catalog_link": "https://catalogs.eku.edu/course-descriptions/che/",
+    "notes": "Lecture only; 0.5 LDT adjustment"
+  },
+  {
+    "institution": "Eastern Kentucky University",
+    "course_code": "CHE 111L",
+    "course_title": "General Chemistry I Lab",
+    "credits": 1,
+    "osu_equivalent": [
+      "CH 261"
+    ],
+    "ldt": 0.5,
+    "catalog_link": "https://catalogs.eku.edu/course-descriptions/che/",
+    "notes": "Lab only; 0.5 LDT adjustment"
+  }
+]

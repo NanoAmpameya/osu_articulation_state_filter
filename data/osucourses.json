@@ -1,0 +1,72 @@
+[
+  {
+    "subject_code": "CH",
+    "course_number": "231",
+    "title": "General Chemistry I",
+    "credits": 4,
+    "description": "Foundations; stoichiometry; bonding; thermochemistry.",
+    "attributes": [
+      "Core Ed +",
+      "Bacc Core *"
+    ],
+    "prerequisites": "MTH 111 or placement",
+    "corequisites": "CH 261",
+    "equivalency": [
+      "CH 221Z"
+    ],
+    "repeatability": false,
+    "recommended": "HS chemistry"
+  },
+  {
+    "subject_code": "CH",
+    "course_number": "232",
+    "title": "General Chemistry II",
+    "credits": 4,
+    "description": "Gases; solutions; kinetics.",
+    "attributes": [
+      "Core Ed +",
+      "Bacc Core *"
+    ],
+    "prerequisites": "CH 231",
+    "corequisites": "CH 262",
+    "equivalency": [
+      "CH 222Z"
+    ],
+    "repeatability": false,
+    "recommended": ""
+  },
+  {
+    "subject_code": "CH",
+    "course_number": "233",
+    "title": "General Chemistry III",
+    "credits": 4,
+    "description": "Equilibrium; thermodynamics; electrochemistry.",
+    "attributes": [
+      "Core Ed +",
+      "Bacc Core *"
+    ],
+    "prerequisites": "CH 232",
+    "corequisites": "CH 263",
+    "equivalency": [
+      "CH 223Z"
+    ],
+    "repeatability": false,
+    "recommended": ""
+  },
+  {
+    "subject_code": "CH",
+    "course_number": "261",
+    "title": "Laboratory for CH 231",
+    "credits": 1,
+    "description": "Experiments aligned with CH 231.",
+    "attributes": [],
+    "prerequisites": "-",
+    "corequisites": "CH 231",
+    "equivalency": [
+      "CH 227Z",
+      "CH 271"
+    ],
+    "repeatability": false,
+    "recommended": ""
+  }
+]

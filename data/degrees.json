@@ -1,0 +1,11 @@
+{
+  "BA_Chem": {
+    "name": "B.A. in Chemistry"
+  },
+  "BS_Chem": {
+    "name": "B.S. in Chemistry"
+  },
+  "Minor_Chem": {
+    "name": "Chemistry Minor"
+  }
+}
