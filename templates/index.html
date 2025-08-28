@@ -1,55 +1,149 @@
 {% extends "base.html" %}
 {% block content %}
-<h1 class="mb-1">OSU Chemistry Transfer Credit Evaluation</h1>
-<p class="sub">Pick a state, choose your institution, and enter a course to see OSU equivalents.</p>
-
-<section class="card border-0 shadow-sm">
-  <div class="card-body p-0">
-    <h2 class="h5">Select Degree</h2>
-    <label class="form-label">Select a Degree Program
-      <select id="degree" class="form-select w-auto">
-        <option value="BA_Chem">B.A. in Chemistry</option>
-        <option value="BS_Chem">B.S. in Chemistry</option>
-        <option value="Minor_Chem">Chemistry Minor</option>
-      </select>
-    </label>
+<!-- Header Section -->
+<div class="header">
+  <div class="osu-brand">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+    Oregon State University
   </div>
-  
-</section>
+  <h1>Chemistry Transfer Credit Evaluation</h1>
+  <p class="subtitle">Discover how your chemistry courses transfer to Oregon State University. Select your degree program, institution, and course to see equivalent credit opportunities.</p>
+</div>
 
-<section class="card border-0 shadow-sm">
-  <div class="card-body p-0">
-    <h2 class="h5">Enter Course</h2>
-    <div class="row g-3 align-items-end">
-      <div class="col-12 col-md-4">
-        <label class="form-label">State
-          <select id="state" class="form-select">
-            <option value="">All states</option>
-          </select>
-        </label>
-      </div>
-      <div class="col-12 col-md-8 position-relative">
-        <label class="form-label">Institution
-          <input id="institution" class="form-control" placeholder="Start typing institution name">
-          <ul id="inst-suggest" class="suggestions"></ul>
-        </label>
-      </div>
-      <div class="col-12 col-md-6">
-        <label class="form-label">Course Code
-          <input id="course" class="form-control" placeholder="e.g., CHE 107LR">
-        </label>
-      </div>
-      <div class="col-12 col-md-6 d-grid d-md-flex">
-        <button id="evaluate" class="btn btn-primary">Check Equivalency</button>
+<!-- Steps Container -->
+<div class="steps-container">
+  <!-- Step 1: Degree Selection -->
+  <section class="card step-card">
+    <div class="card-header">
+      <h2>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+        </svg>
+        Select Your Degree Program
+      </h2>
+    </div>
+    <div class="card-body">
+      <div class="form-group">
+        <label class="form-label">Choose the Oregon State Chemistry program you're interested in:</label>
+        <select id="degree" class="form-select">
+          <option value="BA_Chem">Bachelor of Arts in Chemistry</option>
+          <option value="BS_Chem">Bachelor of Science in Chemistry</option>
+          <option value="Minor_Chem">Chemistry Minor</option>
+        </select>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="card border-0 shadow-sm" id="results" hidden>
-  <div class="card-body p-0">
-    <h2 class="h5">Credit Evaluation Results</h2>
-    <div id="results-body"></div>
+  <!-- Step 2: Institution & Course Selection -->
+  <section class="card step-card">
+    <div class="card-header">
+      <h2>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+        </svg>
+        Enter Course Information
+      </h2>
+    </div>
+    <div class="card-body">
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <div class="form-group">
+            <label class="form-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              State
+            </label>
+            <select id="state" class="form-select">
+              <option value="">All states</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12 col-md-8 position-relative">
+          <div class="form-group">
+            <label class="form-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                <path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.09V17h2V9L12 3z"/>
+              </svg>
+              Institution
+            </label>
+            <input id="institution" class="form-control" placeholder="Start typing your institution name...">
+            <ul id="inst-suggest" class="suggestions"></ul>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group">
+            <label class="form-label">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 8px;">
+                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+              </svg>
+              Course Code
+            </label>
+            <input id="course" class="form-control" placeholder="e.g., CHE 107LR, CHEM 1610">
+          </div>
+        </div>
+        <div class="col-12 col-md-6 d-grid">
+          <button id="evaluate" class="btn btn-primary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            Check Equivalency
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Step 3: Results -->
+  <section class="card step-card fade-in" id="results" hidden>
+    <div class="card-header">
+      <h2>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        Transfer Credit Results
+      </h2>
+    </div>
+    <div class="card-body">
+      <div id="results-body" class="results-container"></div>
+    </div>
+  </section>
+</div>
+
+<!-- Additional Information Card -->
+<section class="card" style="margin-top: 3rem;">
+  <div class="card-header">
+    <h2>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M11 17h2v-6h-2v6zm1-8q.425 0 .713-.288Q13 8.425 13 8t-.287-.713Q12.425 7 12 7t-.712.287Q11 7.575 11 8t.288.712Q11.575 9 12 9zm0 13q-2.075 0-3.9-.788-1.825-.787-3.175-2.137-1.35-1.35-2.137-3.175Q2 14.075 2 12t.788-3.9q.787-1.825 2.137-3.175 1.35-1.35 3.175-2.138Q9.925 2 12 2t3.9.787q1.825.788 3.175 2.138 1.35 1.35 2.137 3.175Q22 9.925 22 12t-.788 3.9q-.787 1.825-2.137 3.175-1.35 1.35-3.175 2.137Q14.075 22 12 22z"/>
+      </svg>
+      How It Works
+    </h2>
+  </div>
+  <div class="card-body">
+    <div class="row g-3">
+      <div class="col-12 col-md-4">
+        <div style="background: var(--info-light); padding: 1.5rem; border-radius: var(--radius-md); height: 100%;">
+          <h3 style="color: var(--info); margin-bottom: 1rem; font-size: 1.125rem;">🎯 Accurate Matching</h3>
+          <p style="margin: 0; color: var(--text-secondary);">Our database contains pre-evaluated course equivalencies from institutions across the United States.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div style="background: var(--success-light); padding: 1.5rem; border-radius: var(--radius-md); height: 100%;">
+          <h3 style="color: var(--success); margin-bottom: 1rem; font-size: 1.125rem;">⚡ Instant Results</h3>
+          <p style="margin: 0; color: var(--text-secondary);">Get immediate feedback on how your courses transfer to Oregon State Chemistry programs.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div style="background: var(--warning-light); padding: 1.5rem; border-radius: var(--radius-md); height: 100%;">
+          <h3 style="color: var(--warning); margin-bottom: 1rem; font-size: 1.125rem;">📋 Request Review</h3>
+          <p style="margin: 0; color: var(--text-secondary);">Don't see your course? Submit it for manual review by our academic advisors.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 {% endblock %}
