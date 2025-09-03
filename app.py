@@ -242,9 +242,9 @@ def api_request_review():
 
     return jsonify({"status": "queued"})
 
+@app.route("/favicon.ico")
+def favicon():
+    return "", 204
+
 if __name__ == "__main__":
     app.run(host=APP_HOST, port=APP_PORT, debug=APP_DEBUG)
-    @app.route("/favicon.ico")
-def favicon():
-    return ("", 204)
-
