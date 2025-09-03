@@ -207,15 +207,16 @@ body {
 .step-card {
   position: relative;
   counter-increment: step-counter;
+  overflow: visible; /* prevent badge from being clipped */
 }
 
 .step-card::before {
   content: counter(step-counter);
   position: absolute;
-  top: -12px;
+  top: -8px; /* reduce offset so it doesn't collide with card edge */
   left: var(--space-lg);
-  width: 32px;
-  height: 32px;
+  width: 28px; /* slightly smaller for more headroom */
+  height: 28px;
   background: var(--primary);
   color: var(--text-inverse);
   border-radius: 50%;
@@ -223,7 +224,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   box-shadow: var(--shadow-base);
 }
 

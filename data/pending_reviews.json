@@ -6,5 +6,221 @@
     "degree": "BA_Chem",
     "submitted_at": "2025-08-15T00:05:59.404806Z",
     "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.299709Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.307372Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.314958Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.321767Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.330555Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.337054Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.345939Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.352407Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.359248Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.366406Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.372582Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:03.380400Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:29.925743Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:29.933506Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:29.941080Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:29.949781Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:29.958151Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:29.966368Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:29.974615Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:29.982848Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:29.990955Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "A",
+    "state": "OR",
+    "course_code": "B",
+    "degree": "C",
+    "submitted_at": "2025-09-02T20:54:29.999504Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "Binghamton University (SUNY)",
+    "state": "NY",
+    "course_code": "CHEM 107",
+    "degree": "BA_Chem",
+    "submitted_at": "2025-09-02T20:59:01.370008Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "Binghamton University (SUNY)",
+    "state": "NY",
+    "course_code": "CHEM 107",
+    "degree": "BA_Chem",
+    "submitted_at": "2025-09-02T21:00:04.349012Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "Binghamton University (SUNY)",
+    "state": "NY",
+    "course_code": "CHEM 107",
+    "degree": "BA_Chem",
+    "submitted_at": "2025-09-02T21:00:41.928131Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "Binghamton University (SUNY)",
+    "state": "NY",
+    "course_code": "CHEM 107",
+    "degree": "BA_Chem",
+    "submitted_at": "2025-09-02T21:01:46.059459Z",
+    "ip": "127.0.0.1"
+  },
+  {
+    "institution": "Binghamton University (SUNY)",
+    "state": "NY",
+    "course_code": "CHEM 107",
+    "degree": "BA_Chem",
+    "submitted_at": "2025-09-02T21:02:03.308094Z",
+    "ip": "127.0.0.1"
   }
 ]
