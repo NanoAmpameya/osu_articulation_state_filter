@@ -69,6 +69,32 @@ def test_evaluate_success():
     assert data["degree"].startswith("B.")
 
 
+def test_evaluate_case_insensitive_and_dashless_suggestion():
+    client = app_module.app.test_client()
+    # Same institution as an existing record, but use dashes/spaces and case differences
+    payload = {
+        "institution": "UNIVERSITY AT BUFFALO (SUNY)",
+        "course_code": "che-107lr",  # stored as "CHE 107LR"
+        "degree": "BA_Chem",
+        "state": "ny",
+    }
+    r = client.post("/api/evaluate", json=payload)
+    # There is no exact (inst, code) match due to case formatting in index
+    assert r.status_code == 200
+    data = r.get_json()
+    assert data["status"] == "no_match"
+    # Should include a suggestion of the canonical course code for that institution
+    assert "CHE 107LR" in data.get("suggestions", [])
+
+
+def test_evaluate_invalid_payload():
+    client = app_module.app.test_client()
+    r = client.post("/api/evaluate", json={"institution": "", "course_code": "", "degree": "", "state": "XX"})
+    assert r.status_code == 400
+    data = r.get_json()
+    assert data["status"] == "error"
+
+
 def test_request_review_validation():
     # Use temp data dir for pending_reviews writes
     tmpdir = tempfile.mkdtemp()

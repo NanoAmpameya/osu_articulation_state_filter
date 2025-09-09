@@ -38,6 +38,13 @@ OSUCOURSES = load("osucourses.json")
 META = { f"{c['subject_code']} {c['course_number']}": c for c in OSUCOURSES }
 STATE_ABBREVIATIONS = { s.get("abbr", "").upper() for s in STATES }
 
+def _normalize_course_code(value: str) -> str:
+    """Normalize course code for fuzzy comparison: lowercase and remove spaces/dashes.
+
+    Example: "CHE-107 " -> "che107"
+    """
+    return (value or "").strip().lower().replace(" ", "").replace("-", "")
+
 def build_equivalency_index():
     """Create a fast lookup index for equivalencies keyed by (institution, course_code)."""
     index = {}
@@ -175,9 +182,18 @@ def api_evaluate():
 
     match = EQUIV_INDEX.get((inst, code))
     if not match:
+        # Provide fuzzy suggestions based on course code (case-insensitive, ignore spaces/dashes)
+        normalized_input = _normalize_course_code(course_code_raw)
+        suggestions_set = set()
+        for record in EQUIV:
+            if (record.get("institution") or "").strip().lower() == inst:
+                if _normalize_course_code(record.get("course_code") or "") == normalized_input:
+                    suggestions_set.add(record.get("course_code") or "")
+        suggestions = sorted(s for s in suggestions_set if s)
         return jsonify({
             "status": "no_match",
             "message": "Course not found in OSU Chemistry articulation database.",
+            "suggestions": suggestions,
         })
 
     meta = [META[k] for k in match.get("osu_equivalent", []) if k in META]
