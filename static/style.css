@@ -633,3 +633,30 @@ body {
 
 .g-3 { gap: 1rem; }
 .align-items-end { align-items: flex-end; }
+
+/* --- Appended: Header/Arrow cards theme --- */
+:root {
+  --beaver: #f6b21a; /* beaver orange-ish */
+  --navy: #1f3271;   /* deep navy */
+}
+.arrow-card {
+  position: relative;
+  background: var(--beaver);
+  color: var(--navy);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 0 rgba(0,0,0,0.15);
+  padding: 1rem 3.5rem 1rem 1.25rem; /* right space for arrow tip */
+}
+.arrow-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.5rem;
+  transform: translateY(-50%);
+  border-left: 14px solid var(--navy);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: 0.6;
+}
+.arrow-card:hover { transform: translateY(1px); box-shadow: 0 1px 0 rgba(0,0,0,0.12); }
