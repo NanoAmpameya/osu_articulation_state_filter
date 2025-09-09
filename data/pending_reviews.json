@@ -230,5 +230,13 @@
     "degree": "BA_Chem",
     "submitted_at": "2025-09-08T20:21:00.709593Z",
     "ip": "127.0.0.1"
+  },
+  {
+    "institution": "Binghamton University (SUNY)",
+    "state": "NY",
+    "course_code": "CHEM 107",
+    "degree": "BA_Chem",
+    "submitted_at": "2025-09-09T21:36:09.111470Z",
+    "ip": "127.0.0.1"
   }
 ]
