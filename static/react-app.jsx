@@ -8,21 +8,14 @@ const { useEffect, useState } = React;
 
 function HeaderNav() {
   return (
-    <header id="top-nav" className="sticky top-0 z-30 bg-[var(--beaver)] border-b border-black/10 shadow-sm">
+    <header id="top-nav" className="sticky top-0 z-30 bg-white border-b shadow-sm" style={{ borderColor: 'var(--primary)' }}>
       <div className="max-w-6xl mx-auto px-3 md:px-6 py-2 flex items-center justify-between">
-        <div className="flex items-center gap-2 font-extrabold text-slate-900 select-none">
-          <span aria-hidden="true">🏛️</span>
-          <span>Transfer Partners</span>
+        <div className="flex items-center gap-2 font-extrabold select-none text-[var(--primary)]">
+          <span>Chemistry Articulation</span>
         </div>
         <nav className="flex items-center gap-2 md:gap-3">
-          <button data-testid="nav-programs" className="rounded-xl px-3 md:px-4 py-2 font-semibold text-slate-900 bg-amber-300 hover:bg-amber-200 border border-black/10">
-            <span className="mr-1" aria-hidden="true">🔎</span> Programs &amp; Courses
-          </button>
-          <button data-testid="nav-events" className="rounded-xl px-3 md:px-4 py-2 font-semibold text-slate-900 bg-amber-300 hover:bg-amber-200 border border-black/10">
-            <span className="mr-1" aria-hidden="true">📅</span> Events
-          </button>
-          <button data-testid="nav-login" className="rounded-xl px-3 md:px-4 py-2 font-semibold text-slate-900 bg-amber-300 hover:bg-amber-200 border border-black/10">
-            <span className="mr-1" aria-hidden="true">⤴️</span> Log in
+          <button data-testid="nav-login" className="rounded-xl px-3 md:px-4 py-2 font-semibold bg-white text-[var(--primary)] hover:bg-gray-50 border" style={{ borderColor: 'var(--primary)' }}>
+            Log in
           </button>
         </nav>
       </div>
@@ -46,7 +39,6 @@ function ArrowCard({ id, icon, label, onClick }) {
       aria-label={label}
     >
       <div className="flex items-center gap-3 text-xl md:text-2xl font-extrabold">
-        <span aria-hidden="true" className="text-2xl md:text-3xl">{icon}</span>
         <span>{label}</span>
       </div>
     </div>
@@ -65,9 +57,9 @@ function ResourceCenter() {
     { id: 'rc-financial-planning', icon: '💲', label: 'Financial Planning' },
   ];
   return (
-    <section id="resource-center" className="bg-slate-50 rounded-2xl p-5 md:p-8 border border-slate-200">
-      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-slate-900">Resource Center</h2>
-      <p className="mt-2 text-center text-lg text-[var(--navy)]">
+    <section id="resource-center" className="rounded-2xl p-5 md:p-8 border bg-white" style={{ borderColor: 'var(--primary)' }}>
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center text-[var(--beaver)]">Resource Center</h2>
+      <p className="mt-2 text-center text-lg text-[var(--beaver)]">
         There are guides, checklists, and printables that will help you on every step of your transfer journey.
       </p>
       <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -347,18 +339,16 @@ function App() {
       <HeaderNav />
       <main className="max-w-5xl mx-auto p-4 md:p-6 space-y-8">
         <section className="bg-white rounded-2xl border border-slate-200 p-5">
-          <h1 className="text-2xl md:text-3xl font-extrabold text-slate-900">OSU Transfer Articulation</h1>
-          <p className="mt-2 text-slate-700">
-            Find how your courses transfer to OSU and request a review if you don’t see a direct match.
+          <h2 className="text-xl md:text-2xl font-bold mb-3">Check Equivalency</h2>
+          <p className="text-slate-700 mb-3">
+            For a given transcript from an arbitrary institution, find the corresponding
+            courses at OSU for credit transfer in the chemistry database.
           </p>
+          <EvaluateFlow />
         </section>
 
         <ResourceCenter />
 
-        <section className="bg-white rounded-2xl border border-slate-200 p-5">
-          <h2 className="text-xl md:text-2xl font-bold mb-3">Check Equivalency</h2>
-          <EvaluateFlow />
-        </section>
       </main>
       <footer className="mt-10 py-6 text-center text-sm text-slate-500">© {new Date().getFullYear()} OSU Transfer Tools</footer>
     </div>

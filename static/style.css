@@ -636,15 +636,18 @@ body {
 
 /* --- Appended: Header/Arrow cards theme --- */
 :root {
-  --beaver: #f6b21a; /* beaver orange-ish */
+  --beaver: #DC4405; /* Beaver Orange */
   --navy: #1f3271;   /* deep navy */
+  /* Map primary vars used by React to orange theme */
+  --primary: #DC4405;
+  --primary-dark: #B8370A;
 }
 .arrow-card {
   position: relative;
-  background: var(--beaver);
-  color: var(--navy);
+  background: #ffffff;
+  color: var(--beaver);
   border-radius: 0.75rem;
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid var(--beaver);
   box-shadow: 0 2px 0 rgba(0,0,0,0.15);
   padding: 1rem 3.5rem 1rem 1.25rem; /* right space for arrow tip */
 }
@@ -654,7 +657,7 @@ body {
   top: 50%;
   right: 0.5rem;
   transform: translateY(-50%);
-  border-left: 14px solid var(--navy);
+  border-left: 14px solid var(--beaver);
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   opacity: 0.6;

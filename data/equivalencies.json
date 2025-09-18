@@ -2,25 +2,26 @@
   {
     "institution": "Binghamton University (SUNY)",
     "course_code": "CHEM 107",
-    "course_title": "Intro Chemistry",
+    "course_title": "General Chemistry I",
     "credits": 4,
     "osu_equivalent": [
       "CH 231",
-      "CH 261"
+      "CH 261",
+      "CH LDT"
     ],
     "ldt": 1.0,
-    "catalog_link": "https://catalog.binghamton.edu/",
-    "notes": "Lecture+Lab combined; 1 cr LDT remainder"
+    "catalog_link": "https://catalog.binghamton.edu/content.php?filter%5B27%5D=CHEM&filter%5B29%5D=&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=2&expand=&navoid=82&search_database=Filter#acalog_template_course_filter",
+    "notes": "CHEM 107 (4 cr) = CH 231 (4) + CH 261 (1) + CH LDT (1)."
   },
   {
     "institution": "College of Western Idaho",
     "course_code": "CHM 101",
-    "course_title": "Intro to Chemistry",
-    "credits": 3,
+    "course_title": "Introductory Chemistry",
+    "credits": 0,
     "osu_equivalent": [],
     "ldt": 0,
-    "catalog_link": "https://catalog.cwi.edu/",
-    "notes": "Intro/survey; Not Equivalent to majors sequence"
+    "catalog_link": "https://catalog.cwi.edu/course-descriptions/chem/",
+    "notes": "Not equivalent to OSU general chemistry (CWI uses CH 111/112 for General Chemistry)."
   },
   {
     "institution": "University at Buffalo (SUNY)",
@@ -28,11 +29,12 @@
     "course_title": "General Chemistry",
     "credits": 3.5,
     "osu_equivalent": [
-      "CH 201"
+      "CH 201",
+      "CH LDT"
     ],
     "ldt": 2.25,
-    "catalog_link": "https://catalogs.buffalo.edu/",
-    "notes": "Partial alignment; LDT credit difference"
+    "catalog_link": "https://catalogs.buffalo.edu/content.php?filter%5B27%5D=CHE&filter%5B29%5D=&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=1&expand=&navoid=18&search_database=Filter#acalog_template_course_filter",
+    "notes": "CHE 107LR (3.5 cr) = CH 201 (3) + CH LDT (2.25). Partial transfer."
   },
   {
     "institution": "Eastern Kentucky University",
@@ -40,11 +42,12 @@
     "course_title": "General Chemistry I",
     "credits": 3,
     "osu_equivalent": [
-      "CH 231"
+      "CH 231",
+      "CH LDT"
     ],
     "ldt": 0.5,
     "catalog_link": "https://catalogs.eku.edu/course-descriptions/che/",
-    "notes": "Lecture only; 0.5 LDT adjustment"
+    "notes": "CHE 111 (3 cr) = CH 231 (4) + CH LDT (0.5)."
   },
   {
     "institution": "Eastern Kentucky University",
@@ -52,10 +55,37 @@
     "course_title": "General Chemistry I Lab",
     "credits": 1,
     "osu_equivalent": [
-      "CH 261"
+      "CH 261",
+      "CH LDT"
     ],
     "ldt": 0.5,
     "catalog_link": "https://catalogs.eku.edu/course-descriptions/che/",
-    "notes": "Lab only; 0.5 LDT adjustment"
+    "notes": "CHE 111L (1 cr) = CH 261 (1) + CH LDT (0.5)."
+  },
+  {
+    "institution": "Eastern Kentucky University",
+    "course_code": "CHE 112",
+    "course_title": "General Chemistry II",
+    "credits": 3,
+    "osu_equivalent": [
+      "CH 233",
+      "CH LDT"
+    ],
+    "ldt": 0.5,
+    "catalog_link": "https://catalogs.eku.edu/course-descriptions/che/",
+    "notes": "CHE 112 (3 cr) = CH 233 (4) + CH LDT (0.5)."
+  },
+  {
+    "institution": "Eastern Kentucky University",
+    "course_code": "CHE 112L",
+    "course_title": "General Chemistry II Laboratory",
+    "credits": 1,
+    "osu_equivalent": [
+      "CH 263",
+      "CH LDT"
+    ],
+    "ldt": 0.5,
+    "catalog_link": "https://catalogs.eku.edu/course-descriptions/che/",
+    "notes": "CHE 112L (1 cr) = CH 263 (1) + CH LDT (0.5)."
   }
 ]
